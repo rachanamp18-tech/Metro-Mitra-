@@ -74,7 +74,7 @@ Crowd levels shown in this project are simulated using predefined patterns and s
 
 ## Live Demo
 
-https://your-project.vercel.app
+https://metro-mitra-theta.vercel.app/
 
 ## Author
 

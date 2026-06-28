@@ -86,4 +86,4 @@ GitHub: https://github.com/your-username
 LinkedIn: https://www.linkedin.com/in/your-profile
 
 
-Built as a practical web application to explore solutions for improving everyday metro travel in Bengaluru.
+Built as a practical web application to make everyday metro travel in Bengaluru easier and more convenient.

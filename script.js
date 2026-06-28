@@ -11,7 +11,7 @@ const STATIONS = {
   ]
 };
 
-// Interchange station
+// Interchange station //
 const INTERCHANGE = "Nadaprabhu Kempegowda Station Majestic";
 
 // CROWD PATTERNS //

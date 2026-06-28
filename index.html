@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <!-- ── HEADER ──────── -->
+  <--  HEADER -->
   <header class="header">
     <div class="logo">MM</div>
     <div>
@@ -23,10 +23,10 @@
     </div>
   </header>
 
-  <!-- ── MAIN ─── -->
+  <--  MAIN  -->
   <main>
 
-    <!-- Hero -->
+    <-- Hero section -->
     <div class="hero">
       <div class="hero-eyebrow">Smart Travel Assistant</div>
       <h1 class="hero-title">Travel <span class="accent">smarter</span>,<br>not harder.</h1>
@@ -40,19 +40,19 @@
       <div class="pill pill-yellow">🟡 Yellow Line</div>
     </div>
 
-    <!-- Tabs -->
+    <-- Tabs section -->
     <div class="tabs">
       <button class="tab-btn active" data-tab="journey">🗺️ Plan Journey</button>
       <button class="tab-btn" data-tab="coach">🚃 Station Guide</button>
     </div>
 
-    <!-- ── TAB 1: JOURNEY PLANNER ───── -->
+    <--  TAB 1: JOURNEY PLANNER  -->
     <div class="tab-panel active" id="journeyPanel">
 
       <div class="card">
         <div class="card-title">Where are you going?</div>
 
-        <!-- Source & Destination -->
+        <-- Source & Destination -->
         <div class="swap-row">
           <div class="field">
             <label class="field-label">From</label>
@@ -69,7 +69,7 @@
           </div>
         </div>
 
-        <!-- Time & Day -->
+        <-- Time & Day -->
         <div class="two-col">
           <div class="field">
             <label class="field-label">Departure time</label>
@@ -87,12 +87,12 @@
         <button class="cta-btn" onclick="planJourney()">Check Crowd & Plan →</button>
       </div>
 
-      <!-- Journey Result -->
+      <-- Journey Result -->
       <div id="journeyResult"></div>
 
     </div>
 
-    <!-- ── TAB 2: STATION GUIDE────── -->
+    <-- TAB 2: STATION GUIDE -->
     <div class="tab-panel" id="coachPanel">
 
       <div class="card">
@@ -108,22 +108,22 @@
         <button class="cta-btn" onclick="checkGates()">Find Exit Gates →</button>
       </div>
 
-      <!-- Coach Result -->
+      <-- Coach Result -->
       <div id="coachResult"></div>
 
-      <!-- Google Map -->
+      <-- Google Map -->
       <div id="stationMap"></div>
     </div>
 
   </main>
 
-  <!-- ── FOOTER ────────── -->
+  <-- FOOTER  -->
   <footer class="footer">
     Metro Mitra · Built for Bengaluru 🚇<br>
     Crowd data is simulated — designed for BMRCL live data integration.<br>
   </footer>
 
-  <!-- Script -->
+  <-- Script -->
   <script src="script.js"></script>
   <script src="app.js"></script>
 

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
-/-- TOKENS --/
+/* ── TOKENS ─────── */
 :root {
   --bg:        #f5f4f0;
   --surface:   #ffffff;
@@ -39,7 +39,7 @@
   --shadow:    0 2px 16px rgba(0,0,0,0.3);
 }
 
-/-- RESET --/
+/* ── RESET ──── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -52,7 +52,7 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/-- HEADER --/
+/* ── HEADER ───── */
 .header {
   background: var(--ink);
   color: #f0f2f5;
@@ -103,13 +103,14 @@ body {
 }
 .icon-btn:hover { background: #1e2028; }
 
-/-- MAIN --/
+/* ── MAIN ──────*/
 main {
   max-width: 580px;
   margin: 0 auto;
   padding: 28px 16px 72px;
 }
 
+/* ── */
 .hero { margin-bottom: 28px; }
 
 .hero-eyebrow {
@@ -132,7 +133,7 @@ main {
   margin-top: 10px; line-height: 1.6;
 }
 
-/-- LINE PILLS --/
+/* ── LINE PILLS ──── */
 .line-pills {
   display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;
 }
@@ -147,7 +148,7 @@ main {
 .pill-green  { background: var(--green-bg);  color: var(--green);  border-color: var(--green); }
 .pill-yellow { background: var(--yellow-bg); color: var(--yellow); border-color: var(--yellow); }
 
-/-- TABS --/
+/* ── TABS ───── */
 .tabs {
   display: flex; gap: 4px;
   background: var(--soft);
@@ -175,7 +176,7 @@ main {
 .tab-panel { display: none; }
 .tab-panel.active { display: block; }
 
-/-- CARD --/
+/* ── CARD ───── */
 .card {
   background: var(--surface);
   border: 1.5px solid var(--border);
@@ -191,7 +192,7 @@ main {
   margin-bottom: 18px;
 }
 
-/-- FORM FIELDS --/
+/* ── FORM FIELDS ────*/
 .field { margin-bottom: 14px; }
 .field:last-child { margin-bottom: 0; }
 
@@ -229,7 +230,7 @@ select:focus, input[type="time"]:focus {
   background: var(--surface);
 }
 
-/-- SWAP ROW --/
+/* ── SWAP ROW ────── */
 .swap-row {
   display: flex; align-items: flex-end; gap: 8px; margin-bottom: 14px;
 }
@@ -246,11 +247,11 @@ select:focus, input[type="time"]:focus {
 }
 .swap-btn:hover { border-color: var(--purple); color: var(--purple); transform: rotate(180deg); }
 
-/-- TWO COLUMN ROW --/
+/* ── TWO COLUMN ROW ────── */
 .two-col { display: flex; gap: 12px; }
 .two-col .field { flex: 1; }
 
-/-- DAY TOGGLE --/
+/* ── DAY TOGGLE ───── */
 .day-toggle { display: flex; gap: 6px; }
 
 .day-btn {
@@ -269,7 +270,7 @@ select:focus, input[type="time"]:focus {
   color: white;
 }
 
-/-- CTA BUTTON --/
+/* ── CTA BUTTON ───── */
 .cta-btn {
   width: 100%; padding: 14px;
   border-radius: var(--radius-sm); border: none;
@@ -287,7 +288,7 @@ select:focus, input[type="time"]:focus {
   color: white;
 }
 
-/-- RESULTS --/
+/* ── RESULTS ───── */
 #journeyResult, #coachResult { display: none; }
 
 /* SUMMARY */
@@ -509,7 +510,7 @@ select:focus, input[type="time"]:focus {
   font-size: 13px; color: var(--red);
 }
 
-/-- FOOTER --/
+/* ── FOOTER ────── */
 .footer {
   text-align: center;
   font-size: 12px; color: var(--muted);
@@ -519,7 +520,7 @@ select:focus, input[type="time"]:focus {
 }
 .footer a { color: var(--purple); text-decoration: none; }
 
-/--RESPONSIVE --/
+/* ── RESPONSIVE ──────── */
 @media (max-width: 400px) {
   .two-col { flex-direction: column; }
   .best-times-row { flex-direction: column; }
@@ -527,7 +528,7 @@ select:focus, input[type="time"]:focus {
   .hero-title { font-size: 26px; }
 }
 
-/--TRANSITIONS --/
+/* ── TRANSITIONS ─────── */
 .card, .stops-section, .coach-result-card,
 select, input, .cta-btn, .tab-btn {
   transition: background 0.3s, border-color 0.2s, color 0.2s;

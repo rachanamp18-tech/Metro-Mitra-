@@ -13,7 +13,7 @@ const STATIONS = {
 
 // Interchange station
 const INTERCHANGE = "Nadaprabhu Kempegowda Station Majestic";
-
+const INTERCHAGE = "Rashtreeya Vidyalaya Road";
 // CROWD PATTERNS //
 /* Crowd % by hour (0–23) */
 const CROWD_PATTERNS = {

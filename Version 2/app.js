@@ -49,7 +49,9 @@ function buildCrowdChart(src, dst, srcLine, dstLine) {
       <div class="chart-bar-wrap">
         <div class="chart-bar bar-${lv} ${isNow ? 'chart-now' : ''}"
           style="height:${heightPct}%"
-          title="${h}:00 — ${pct}%">
+          data-hour="${formatHour(h)}"
+          data-percent="${pct}"
+          onclick="showCrowdInfo(this)">
         </div>
         <div class="chart-label">${label}
         </div>
@@ -57,14 +59,28 @@ function buildCrowdChart(src, dst, srcLine, dstLine) {
   }
 
   return `
-    <div class="chart-card">
-      <div class="chart-title">Crowd trend today - tap a bar to see %
-      </div>
-      <div class="chart-bars">
-        ${bars.join('')}
-      </div>
-    </div>`;
+  <div class="chart-card">
+    <div class="chart-title">Click a bar to see crowd percentage</div>
+
+    <div class="chart-bars">
+      ${bars.join('')}
+    </div>
+
+    <div id="crowdInfo" class="crowd-info">
+      Click a bar to see the crowd percentage.
+    </div>
+  </div>`;
 }
+
+function showCrowdInfo(bar) {
+  const hour = bar.dataset.hour;
+  const percent = Number(bar.dataset.percent);
+
+  const info = document.getElementById("crowdInfo");
+  info.innerHTML =
+    `${crowdEmoji(percent)} <strong>${hour}</strong> : ${percent}% crowd (${crowdLabel(percent)})`;
+}
+
 
 /* Get metro line name for a station */
 function getLineOf(name) {
@@ -435,7 +451,7 @@ function checkGates() {
           <div class="coach-info-item">
            <div class="info-icon">🚪</div>
            <div class="info-body">
-             <div class="info-label">Gate ${k}</div>
+             <div class="info-label">${t('gate')} ${k}</div>
              <div class="info-value">${v}</div>
            </div>
           </div>`).join('')}

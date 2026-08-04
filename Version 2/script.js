@@ -419,7 +419,7 @@ const EXIT_GUIDE_DATA = [
 
 {
   line: "Purple",
-  station: "Sri Balagangadharanatha Swamiji Station, Hosahalli",
+  station: "Sri Balagangadharanatha Swamiji Station Hosahalli",
   gates: {
     A: "Hosahalli",
     B: "Magadi Road Junction"

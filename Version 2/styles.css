@@ -648,6 +648,7 @@ select, input, .cta-btn, .tab-btn {
   border-radius: 4px 4px 0 0;
   transition: height 0.5s ease;
   min-height: 3px;
+  cursor: pointer;
 }
 
 .chart-bar.bar-low { background: var(--green); }
@@ -664,6 +665,16 @@ select, input, .cta-btn, .tab-btn {
   outline: 2px solid var(--purple);
   outline-offset: 1px;
   border-radius: 4px 4px 0 0;
+}
+
+.crowd-info {
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--soft);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--ink);
 }
 
 /* LANGUAGE TOGGLE */

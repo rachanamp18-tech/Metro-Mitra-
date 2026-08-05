@@ -70,6 +70,9 @@ const LANGUAGES = {
       errSelect: "Select both source and destination stations to plan your journey.",
       errSame: "Source and destination are the same. Choose different stations.",
       errNoStation: "Select a destination station to see exit gate information.",
+      gateLabel: "Gate",
+      tipLabel: "Tip",
+      openMaps: "📍 Open in Google Maps",
 
     /* Line Pills */
       linePurple: "🟣 Purple Line",
@@ -224,7 +227,7 @@ const LANGUAGES = {
      "Doddakallasandra": "ದೊಡ್ಡಕಲ್ಲಸಂದ್ರ",
      "Vajarahalli": "ವಾಜರಹಳ್ಳಿ",
      "Thalaghattapura": "ತಲಘಟ್ಟಪುರ",
-     "Silk Institute": "`ರೇಷ್ಮೆ ಸಂಸ್ಥೆ ",
+     "Silk Institute": "ರೇಷ್ಮೆ ಸಂಸ್ಥೆ ",
 
      "Ragigudda": "ರಾಗಿಗುಡ್ಡ",
      "Jayadeva Hospital": "ಜಯದೇವ ಆಸ್ಪತ್ರೆ",
@@ -246,6 +249,7 @@ const LANGUAGES = {
     /* Gates */
      gateLabel: "ದ್ವಾರ",
      tipLabel: "ಸಲಹೆ",
+     openMaps: "📍 ಗೂಗಲ್ ಮ್ಯಾಪ್ ನಲ್ಲಿ ತೆರೆಯಿರಿ",
      gateDescriptions: {
 
      // Purple Line
@@ -747,11 +751,11 @@ const LANGUAGES = {
       linePurple: "🟣 बैंगनी लाइन",
       lineGreen: "🟢 हरी लाइन",
       lineYellow: "🟡 पीली लाइन",
-  }
   
     /* Gates */
       gateLabel: "गेट",
       tipLabel: "सुझाव",
+      openMaps: "📍 Google Maps में खोलें",
       gateDescriptions: {
 
     // Purple Line
@@ -1174,8 +1178,9 @@ const LANGUAGES = {
        A: "डेल्टा इलेक्ट्रॉनिक्स की तरफ",
        B: "बोम्मसंद्रा इंडस्ट्रियल एरिया की तरफ",
        tip: "टर्मिनल स्टेशन। इंडस्ट्रियल एरिया के लिए गेट B का उपयोग करें।"
-     },
-     },
+     }
+     }
+    }
 };
 
 /* Current language — default English */
@@ -1191,12 +1196,6 @@ function setLanguage(lang) {
   currentLang = lang;
   localStorage.setItem('mm-lang', lang);
   applyLanguage();
-
-  /* Line Pills */
-  const pills = document.querySelectorAll('.pill');
-  pills[0].textContent = t('linePurple');
-  pills[1].textContent = t('lineGreen');
-  pills[2].textContent = t('lineYellow');
 }
 
 /* Load saved language */

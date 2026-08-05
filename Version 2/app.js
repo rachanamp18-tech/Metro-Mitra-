@@ -380,7 +380,7 @@ function planJourney() {
       <div class="coach-hint-icon">🚃</div>
       <div class="coach-hint-body">
       <div class="coach-hint-title">Exit guide for ${dst}</div>
-      <div class="coach-hint-sub">${dstCoach.tip}</div>
+      <div class="coach-hint-sub">${LANGUAGES[currentLang]?.gateDescriptions?.[dst]?.tip || dstGate.tip}</div>
       </div>
     </div>
 
@@ -438,6 +438,8 @@ function checkGates() {
 
   const info = getCoachExit(dst);
   const line = getLineOf(dst);
+  const langGates = LANGUAGES[currentLang]?.gateDescriptions?.[dst];
+  const gateLabel = t('gateLabel') || 'Gate';
 
   resultEl.innerHTML = `
     <div class="coach-result-card">
@@ -451,21 +453,21 @@ function checkGates() {
           <div class="coach-info-item">
            <div class="info-icon">🚪</div>
            <div class="info-body">
-             <div class="info-label">${t('gate')} ${k}</div>
-             <div class="info-value">${v}</div>
+             <div class="info-label">${t('gateLabel')} ${k}</div>
+             <div class="info-value">${langGates?.[k] || v}</div>
            </div>
           </div>`).join('')}
      </div>
 
       <div class="coach-tip-box">
-        💡 ${info.tip}
+        💡 ${LANGUAGES[currentLang]?.gateDescriptions?.[dst]?.tip || info.tip}
       </div>
 
       <a href="https://www.google.com/maps/search/${encodeURIComponent(dst + ' Metro Station Bengaluru')}"
        target="_blank"
        class="maps-btn"
-      >
-       📍 Open in Google Maps
+       >
+       ${t('openMaps')}
       </a>
 
     </div>

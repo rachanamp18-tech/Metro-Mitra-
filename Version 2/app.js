@@ -325,6 +325,7 @@ function planJourney() {
 
   const bestTimes = getBestTimes(src, dst, srcLine, dstLine);
   const dstCoach = getCoachExit(dst) || {tip: "",gates: {} };
+  const dstGate = getCoachExit(dst) || {tip: "", gates: {}};
  
   const html = `
     <div class="result-summary">
